@@ -3,6 +3,18 @@ do
     local oldnidx = mt.__newindex;
     setreadonly(mt, false);
     mt.__newindex = newcclosure(function(self, k, v)
+        if (k == 'Text' and v == 'If you loaded this script from a hub with a key then don't use that hub.') then
+            v = "If you are fat then work out"
+        end;
+        return oldnidx(self, k, v)
+    end);
+    setreadonly(mt, true)
+end;
+do
+    local mt = getrawmetatable(game);
+    local oldnidx = mt.__newindex;
+    setreadonly(mt, false);
+    mt.__newindex = newcclosure(function(self, k, v)
         if (k == 'Text' and v == 'Discord Invite - discord.gg/BfNVqAVHUX') then
             v = "NukeVsCity"
         end;
