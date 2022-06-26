@@ -1,0 +1,13 @@
+do
+    local mt = getrawmetatable(game);
+    local oldnidx = mt.__newindex;
+    setreadonly(mt, false);
+    mt.__newindex = newcclosure(function(self, k, v)
+        if (k == 'Text' and v == 'Discord Invite - discord.gg/BfNVqAVHUX') then
+            v = "NukeVsCity"
+        end;
+        return oldnidx(self, k, v)
+    end);
+    setreadonly(mt, true)
+end;
+loadstring(game:HttpGet('https://github.com/RunDTM/miningsim2/raw/main/script.lua'))()
