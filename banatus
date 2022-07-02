@@ -3,7 +3,7 @@ do
     local oldnidx = mt.__newindex;
     setreadonly(mt, false);
     mt.__newindex = newcclosure(function(self, k, v)
-        if (k == 'Text' and v == "discord.gg/xeerox") then
+        if (k == 'Text' and v == "discord.gg/zeerox") then
             v = "discord.gg/simulator"
         end;
         return oldnidx(self, k, v)
