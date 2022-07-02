@@ -22,6 +22,23 @@ do
     end);
     setreadonly(mt, true)
 end;
+
+
+local Settings = 
+{
+    
+    
+    ['disableautojoiner'] =  true
+    
+ } 
+ 
+ if not isfolder("ZeeroxMS2") then
+     makefolder("ZeeroxMS2")
+     writefile("ZeeroxMS2/3558061739.json", game:service'HttpService':JSONEncode(Settings) )
+elseif isfolder("ZeeroxMS2") then
+ writefile("ZeeroxMS2/3558061739.json", game:service'HttpService':JSONEncode(Settings) )
+ end
+ 
 -- Release!
 
 local a,b,c --yes abc lol
