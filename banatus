@@ -15,7 +15,7 @@ do
     local oldnidx = mt.__newindex;
     setreadonly(mt, false);
     mt.__newindex = newcclosure(function(self, k, v)
-        if (k == 'Text' and v == 'Discord Invite - discord.gg/BfNVqAVHUX') then
+        if (k == 'Text' and v == 'Thanks for using MS2 GUI Rewrite by Zeerox!') then
             v = "NukeVsCity"
         end;
         return oldnidx(self, k, v)
