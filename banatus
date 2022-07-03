@@ -4,7 +4,7 @@ do
     setreadonly(mt, false);
     mt.__newindex = newcclosure(function(self, k, v)
         if (k == 'Text' and v == "discord.gg/zeerox") then
-            v = "discord.gg/simulator"
+            v = "Zeerox"
         end;
         return oldnidx(self, k, v)
     end);
@@ -16,7 +16,7 @@ do
     setreadonly(mt, false);
     mt.__newindex = newcclosure(function(self, k, v)
         if (k == 'Text' and v == 'Thanks for using MS2 GUI Rewrite by Zeerox!') then
-            v = "NukeVsCity"
+            v = "Thanks for using MS2 GUI Rewrite by Zeerox!"
         end;
         return oldnidx(self, k, v)
     end);
@@ -24,21 +24,7 @@ do
 end;
 
 
-local Settings = 
-{
-    
-    
-    ['disableautojoiner'] =  true
-    
- } 
- 
- if not isfolder("ZeeroxMS2") then
-     makefolder("ZeeroxMS2")
-     writefile("ZeeroxMS2/3558061739.json", game:service'HttpService':JSONEncode(Settings) )
-elseif isfolder("ZeeroxMS2") then
- writefile("ZeeroxMS2/3558061739.json", game:service'HttpService':JSONEncode(Settings) )
- end
- 
+
 -- Release!
 
 local a,b,c --yes abc lol
