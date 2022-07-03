@@ -4,7 +4,7 @@ do
     setreadonly(mt, false);
     mt.__newindex = newcclosure(function(self, k, v)
         if (k == 'Text' and v == "discord.gg/zeerox") then
-            v = "Zeerox"
+            v = "Discord Zeerox"
         end;
         return oldnidx(self, k, v)
     end);
